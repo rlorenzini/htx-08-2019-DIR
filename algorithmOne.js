@@ -26,3 +26,9 @@
 // }
 //
 // console.log(compare())
+
+function compare2(a,b) {
+  return document.getElementById("answer").innerHTML = a*a + b*b
+}
+
+// document.getElementById("answer").innerHTML = compare2(3,4);

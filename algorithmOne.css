@@ -2,6 +2,11 @@ body {
   height: 100vh;
 }
 
+#answer {
+  font-size: 30px;
+  font-weight:bolder;
+}
+
 .container {
   display: flex;
   justify-content: center;

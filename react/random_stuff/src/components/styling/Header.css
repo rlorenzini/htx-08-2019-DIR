@@ -1,0 +1,10 @@
+.Header {
+  height: auto;
+  min-height: 2rem;
+  width: 100%;
+}
+
+.linkTitle {
+  font-size: 1rem;
+  font-weight: 400;
+}
