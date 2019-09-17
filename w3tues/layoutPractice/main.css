@@ -1,0 +1,106 @@
+/* Coded for DigitalCrafts HTX Immersive Full Stack Developer Course */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.container {
+  width:100%;
+  height: 100%;
+}
+/* HEADER START */
+.header {
+  float: none;
+  margin: 0;
+  background-color: blue;
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.headerText {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+}
+/* HEADER END */
+/* MAIN START */
+.mainBody {
+  background-color: none;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.sideBar {
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  background-color: green;
+  width: 15%;
+  min-height: 100%;
+}
+
+.sideBarText {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#sideBarTextBottom {
+  align-self: flex-end;
+}
+
+.mainContent {
+  border: 2px solid black;
+  float: left;
+  padding-left: .5rem;
+  background-color: gray;
+  width: 85%;
+  min-height: 100%;
+  float: left;
+}
+
+.mainContentText {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: cursive;
+}
+/* MAIN END */
+/* FOOTER START */
+.footer {
+  background-color: black;
+  height: 3.75rem;
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerText {
+  font-size: 1rem;
+  color: white;
+}
+
+
+#footerCreditBuilder {
+  font-weight: 500;
+  font-family: cursive;
+}
+
+#footerCreditCompany {
+  font-family: fantasy;
+}
+
+#footerCreditCourse {
+  font-family: monospace;
+}
+/* FOOTER END */
