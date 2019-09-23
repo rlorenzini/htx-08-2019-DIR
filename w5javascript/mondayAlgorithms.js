@@ -84,6 +84,7 @@ function eulerProblem() {
 //if i is evenly divisible by e, go to next iteration of e
 //else, return false and try next number
 //we limit i to 10000000000000 to keep our loop for going infinite incase
-//our logic in the function is wrong/doesn't break when supposed to 
+//our logic in the function is wrong/doesn't break when supposed to
 
 console.log(eulerProblem())
+//end Challenge 3
