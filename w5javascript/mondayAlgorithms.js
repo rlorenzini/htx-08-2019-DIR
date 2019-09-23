@@ -15,13 +15,17 @@ function collatz(num) {
   };
   return collatzArray
 };
+console.group('Collatz')
 console.log(collatz(17));
+console.groupEnd()
 //end Challenge 1
 
 //Challenge 2
 //Palindrome
 //regex is used to check strings for specific characters and can be used
 //to replace those digits with other digits (check ASCII; also punctuations)
+
+console.group('Palindrom Results')
 function palindromeWithRegex(str) {
   var regex = /[\W_]/g;
 
@@ -32,8 +36,8 @@ function palindromeWithRegex(str) {
   return reverseStr === lowRegStr;
 };
 
-console.log(palindromeWithRegex('A man, a plan, a canal. Panama'));
-console.log(palindromeWithRegex('this is not a palindrome'));
+console.log('First: ' + palindromeWithRegex('A man, a plan, a canal. Panama'));
+console.log('Second: ' + palindromeWithRegex('this is not a palindrome'));
 
 //without regex, this function cannot calculate spaces, commas, etc
 //but smart functions make it quick and easy
@@ -41,8 +45,8 @@ function palindromeWithoutRegex(str) {
    return str == str.split('').reverse().join('');
 };
 
-console.log(palindromeWithoutRegex('racecar'));
-console.log(palindromeWithoutRegex('race car'));
+console.log('Third: ' + palindromeWithoutRegex('racecar'));
+console.log('Fourth: ' + palindromeWithoutRegex('race car'));
 
 //this is what it looks like without using smart functions
 function palindromeWithoutSmartFunctions(str, i) {
@@ -51,7 +55,7 @@ function palindromeWithoutSmartFunctions(str, i) {
   //looks like a mess
 };
 
-console.log(palindromeWithoutSmartFunctions('this is not a palindrome'));
+console.log('Fifth: ' + palindromeWithoutSmartFunctions('this is not a palindrome'));
 
 //palindome with a for loop
 function palindromeForLoop(str) {
@@ -62,7 +66,8 @@ function palindromeForLoop(str) {
   return true;
 };
 
-console.log(palindromeForLoop('tacocat'));
+console.log('Sixth: ' + palindromeForLoop('tacocat'));
+console.groupEnd()
 //end Challenge 2
 
 //Challenge 3
@@ -88,5 +93,5 @@ function eulerProblem() {
 //we limit i to 10000000000000 to keep our loop for going infinite incase
 //our logic in the function is wrong/doesn't break when supposed to
 
-console.log(eulerProblem())
+console.log('Euler Number: ' + eulerProblem())
 //end Challenge 3
