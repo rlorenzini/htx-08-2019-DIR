@@ -21,7 +21,7 @@ console.log(collatz(17));
 //Challenge 2
 //Palindrome
 //regex is used to check strings for specific characters and can be used
-//to replace those digits with other digits (check ASCII)
+//to replace those digits with other digits (check ASCII; also punctuations)
 function palindromeWithRegex(str) {
   var regex = /[\W_]/g;
 
