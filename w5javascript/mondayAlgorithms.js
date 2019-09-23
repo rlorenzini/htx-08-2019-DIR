@@ -11,6 +11,7 @@ function collatz(num) {
     collatzArray.push(num)
     //if num is divisible by 2, then (?) divide num by two
     //else (:) multiple num by 3 and add 1
+    //can be done with an if statement (if num/2 != 0)
   };
   return collatzArray
 };
