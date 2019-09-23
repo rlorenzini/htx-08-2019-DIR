@@ -16,16 +16,16 @@ function collatz(num) {
   return collatzArray
 };
 console.group('Collatz')
-console.log(collatz(17));
+console.log(collatz(17))
 console.groupEnd()
 //end Challenge 1
 
 //Challenge 2
 //Palindrome
+console.group('Palindrome Results')
 //regex is used to check strings for specific characters and can be used
 //to replace those digits with other digits (check ASCII; also punctuations)
 
-console.group('Palindrom Results')
 function palindromeWithRegex(str) {
   var regex = /[\W_]/g;
 
