@@ -42,6 +42,7 @@ function palindromeWithoutRegex(str) {
 };
 
 console.log(palindromeWithoutRegex('racecar'));
+console.log(palindromeWithoutRegex('race car'));
 
 //this is what it looks like without using smart functions
 function palindromeWithoutSmartFunctions(str, i) {
