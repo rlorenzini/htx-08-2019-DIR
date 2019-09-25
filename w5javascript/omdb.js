@@ -35,3 +35,24 @@ function fetchAndDisplayData() {
 
 const addMovieToPage = document.getElementById("addMovieToPage");
 addMovieToPage.addEventListener("click", fetchAndDisplayData);
+
+
+//everything below this is just to show concepts at the time of the question 
+array = [1,2,3,4,5,6,7,8,9]
+
+function randomStuff() {
+console.log(Math.floor(Math.random() * array.length))
+}
+randomStuff()
+
+
+array2 = []
+
+function pushToArray() {
+  while(array2.length < 20) {
+    array2.push("frogs")
+  }
+}
+
+pushToArray()
+console.log(array2)
