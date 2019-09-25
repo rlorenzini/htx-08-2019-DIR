@@ -30,9 +30,6 @@ function fetchAndDisplayData() {
         `
         document.getElementById("insertMovieDataHere").innerHTML = movieData
       };
-      if else {
-        console.log("SOMEthing weNT WRonG!")
-      }
     });
 };
 
