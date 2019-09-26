@@ -60,7 +60,12 @@ pushToArray();
 console.log(array2);
 console.groupEnd();
 
-//absolutely no clue how this shuffle functions works or why
+//how does this suffle function work?
+//i in the index, j in a random number, and x is the new array
+//you iterate through the array's index
+//each index is assigned a new random index between 0 and the length of the array
+//now you have an array with all the original values but a new index order
+
 console.group("shuffle() and deal()");
 function shuffle(a) {
    var j, x, i;
@@ -72,6 +77,7 @@ function shuffle(a) {
    };
    return a;
 };
+
 console.log("shuffled array");
 console.log(shuffle(array));
 
