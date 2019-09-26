@@ -38,27 +38,28 @@ addMovieToPage.addEventListener("click", fetchAndDisplayData);
 
 
 //everything below this is just to show concepts at the time of the question
+console.group("randomStuff() and pushToArray()");
 array = [1,2,3,4,5,6,7,8,9]
 
 function randomStuff() {
-console.log(Math.floor(Math.random() * array.length))
-}
-randomStuff()
+console.log(Math.floor(Math.random() * array.length) + 1);
+};
+randomStuff();
 
 
-array2 = []
+array2 = [];
 
 function pushToArray() {
   while(array2.length < 20) {
     array2.push("frogs")
-  }
-}
+  };
+};
 
-pushToArray()
-console.log(array2)
-
+pushToArray();
+console.log(array2);
+console.groupEnd();
 //absolutely no clue how this shuffle functions works or why
-
+console.group("shuffle() and deal()");
 function shuffle(a) {
    var j, x, i;
    for (i = array.length - 1; i > 0; i--) {
@@ -66,8 +67,23 @@ function shuffle(a) {
        x = a[i];
        a[i] = a[j];
        a[j] = x;
-   }
+   };
    return a;
-}
+};
+console.log("shuffled array");
+console.log(shuffle(array));
 
-console.log(shuffle(array))
+newArray = [];
+
+function deal(a) {
+  var shuffledArray = shuffle(array);
+  var oneIndex = shuffledArray.pop()
+  return a.push(oneIndex);
+
+};
+deal(newArray);
+console.log("newArray with one value from array");
+console.log(newArray);
+console.log("array after index popped");
+console.log(array);
+console.groupEnd();
