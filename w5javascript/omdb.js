@@ -50,14 +50,16 @@ randomStuff();
 array2 = [];
 
 function pushToArray() {
-  while(array2.length < 20) {
+  while(array2.length < 10) {
     array2.push("frogs")
   };
 };
 
 pushToArray();
+
 console.log(array2);
 console.groupEnd();
+
 //absolutely no clue how this shuffle functions works or why
 console.group("shuffle() and deal()");
 function shuffle(a) {
@@ -77,11 +79,13 @@ newArray = [];
 
 function deal(a) {
   var shuffledArray = shuffle(array);
-  var oneIndex = shuffledArray.pop()
-  return a.push(oneIndex);
+  var oneIndex = shuffledArray.pop();
 
+  return a.push(oneIndex);
 };
+
 deal(newArray);
+
 console.log("newArray with one value from array");
 console.log(newArray);
 console.log("array after index popped");
