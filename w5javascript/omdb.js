@@ -37,7 +37,7 @@ const addMovieToPage = document.getElementById("addMovieToPage");
 addMovieToPage.addEventListener("click", fetchAndDisplayData);
 
 
-//everything below this is just to show concepts at the time of the question 
+//everything below this is just to show concepts at the time of the question
 array = [1,2,3,4,5,6,7,8,9]
 
 function randomStuff() {
@@ -56,3 +56,18 @@ function pushToArray() {
 
 pushToArray()
 console.log(array2)
+
+//absolutely no clue how this shuffle functions works or why
+
+function shuffle(a) {
+   var j, x, i;
+   for (i = array.length - 1; i > 0; i--) {
+       j = Math.floor(Math.random() * (i + 1));
+       x = a[i];
+       a[i] = a[j];
+       a[j] = x;
+   }
+   return a;
+}
+
+console.log(shuffle(array))
