@@ -1,0 +1,23 @@
+<!-- you have an array of X digits and are given two valeus from that array -->
+<!-- return everything between those two values, including repeats -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to extract the second and the third elements from the array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var fruits = [0,0,0,0,0,0,1,2,3,4,5,5,5,5,6,7,8,8,9,10,10];
+  var citrus = fruits.slice(fruits.indexOf(2), fruits.indexOf(7)+1);
+  document.getElementById("demo").innerHTML = citrus;
+}
+</script>
+
+</body>
+</html>
