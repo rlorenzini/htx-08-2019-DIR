@@ -7,6 +7,8 @@
 <body>
 
 <p>Click the button to extract the elements from the array.</p>
+<p>The array is [0,0,0,0,0,0,1,2,3,4,5,5,5,5,6,7,8,8,9,10,10] </p>
+<p>The values are 2 and 7.</p>
 
 <button onclick="myFunction()">Try it</button>
 
@@ -14,9 +16,9 @@
 
 <script>
 function myFunction() {
-  var fruits = [0,0,0,0,0,0,1,2,3,4,5,5,5,5,6,7,8,8,9,10,10];
-  var citrus = fruits.slice(fruits.indexOf(2), fruits.indexOf(7)+1);
-  document.getElementById("demo").innerHTML = citrus;
+  var array = [0,0,0,0,0,0,1,2,3,4,5,5,5,5,6,7,8,8,9,10,10];
+  var value = array.slice(array.indexOf(2), array.indexOf(7)+1);
+  document.getElementById("demo").innerHTML = value;
 }
 </script>
 
