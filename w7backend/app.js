@@ -18,4 +18,8 @@ app.get("/about", (req,res) => {
   res.render("about")
 })
 
+app.get('/newPage', (req,res) => {
+  res.render("newPage")
+})
+
 app.listen(port, () => {console.log(`listening on ${port}`)});

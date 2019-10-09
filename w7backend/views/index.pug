@@ -15,16 +15,14 @@ html
     //can either use link or style to import custom css files 
     //if using link your app.js file needs express.static() and your 
     //href does not include the file path, but just the file name itself
-    
-    
+        
   body
-    include ./header
-    h1 #{message}
+    include includes/header
+      h1 #{message}
       //another way to call passed parameters 
     
     block content
-      p stuff stuff stuff
-      
+      p this is the index page
       
       
 //ignore this (command + / === /* */ and does not work)
