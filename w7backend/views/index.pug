@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title #{title}
+    
+    link(rel="stylesheet" href="/style.css")
+    
+    //style 
+      include ../styles/style.css
+      
+    //can either use link or style to import custom css files 
+    //if using link your app.js file needs express.static() and your 
+    //href does not include the file path, but just the file name itself
+    
+    
+  body
+    include ./header
+    h1 #{message}
+    
+    block content
+      p stuff stuff stuff
+      
+      
+      
+//ignore this (command + / === /* */ and does not work)
+//comments are tricky with pug
+  since this is now commented out but on a different line
+    and this is commented out 
+      and this 
+                                                  and this
+  your comments must be relative to your code or you'll comment out 
+    large chunks of your code unintentionally
