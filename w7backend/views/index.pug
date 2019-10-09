@@ -4,7 +4,8 @@ html
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title #{title}
+    title= title 
+      //can call passed parameters like so, or like on line 21
     
     link(rel="stylesheet" href="/style.css")
     
@@ -19,6 +20,7 @@ html
   body
     include ./header
     h1 #{message}
+      //another way to call passed parameters 
     
     block content
       p stuff stuff stuff
