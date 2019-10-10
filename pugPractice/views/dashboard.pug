@@ -1,0 +1,16 @@
+extends base
+
+block base
+  h3 Dashboard
+  p hello #{name}
+  h5 My Favorites
+  if message
+    p= message
+  if favMovies
+    ul
+    for movie in favMovies
+      li= movie.title
+
+  include includes/add-movie
+  
+  //this is the user's dashboard on login

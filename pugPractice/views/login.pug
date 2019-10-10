@@ -1,0 +1,8 @@
+extends base
+
+block base
+  h3 Login Page
+  form(method="POST" action="/account/login")
+    label(for='name') Name
+    input#name(type='text' aria-describedby='emailHelp' placeholder='Enter your name' name='name')
+    button Login

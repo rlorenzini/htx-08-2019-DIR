@@ -1,0 +1,12 @@
+extends base
+
+block base
+  ul#allMoviesList
+  each movie in movies
+    li
+      - var urlSlug = movie.slug
+      a(href="/movies/" + urlSlug)= movie.title
+
+
+
+  //this is the sorted movies page
