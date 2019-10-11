@@ -12,8 +12,9 @@ li a {
 }
 
 #frogs {
+  content:url("../images/1potatoes_large.png");
   /* border: 5px solid black; */
-  background-color: black;
+  /* background-color: black; */
   height: 100px;
   width: 100px;
 }

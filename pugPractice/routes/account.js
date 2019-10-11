@@ -2,6 +2,7 @@ const express = require("express"),
   router = express.Router();
 
 router.get("/", (req,res) => {
+  console.log(req.session)
   if (req.session && req.session.name) {
     res.redirect("/account/dashboard");
   } else {

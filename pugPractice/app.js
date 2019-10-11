@@ -3,7 +3,7 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   PORT = process.env.PORT || 8080,
   session = require('express-session'),
-  accountRouter = require('./routes/account')
+  accountRouter = require('./routes/account');
 
 app.set('view engine', 'pug');
 
