@@ -10,6 +10,7 @@ router.get("/", (req,res) => {
   }
 });
 
+//==================HANDLE LOGIN=======================
 router.get("/login", (req,res) => {
   console.log("hello to the login page")
   if (req.session && req.session.name) {
@@ -25,6 +26,7 @@ router.post("/login", (req,res) => {
   res.redirect("/account");
 });
 
+//=================USER MAIN PAGE======================
 router.post("/add", (req,res) => {
   if (req.session) {
     if (!req.session.favMovies) req.session.favMovies = [];
@@ -46,6 +48,7 @@ router.get("/dashboard", (req,res) => {
   res.render("dashboard", { favMovies: data.favMovies, message: data.message, name: req.session.name || "buddy" });
 });
 
+//====================LOGOUT===========================
 router.get("/logout", (req,res) => {
   req.session.destroy(() => {
     res.redirect("/account/login");
