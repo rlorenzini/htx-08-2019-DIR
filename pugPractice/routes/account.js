@@ -2,7 +2,7 @@ const express = require("express"),
   router = express.Router();
 
 router.get("/", (req,res) => {
-  console.log(req.session)
+  // console.log(req.session)
   if (req.session && req.session.name) {
     res.redirect("/account/dashboard");
   } else {
@@ -12,7 +12,8 @@ router.get("/", (req,res) => {
 
 //==================HANDLE LOGIN=======================
 router.get("/login", (req,res) => {
-  console.log("hello to the login page")
+  // console.log("hello to the login page")
+  console.log("a bunch of potatoes are exploding on the get login request")
   if (req.session && req.session.name) {
     res.redirect("/dashboard");
   }
@@ -21,6 +22,7 @@ router.get("/login", (req,res) => {
 
 router.post("/login", (req,res) => {
   if (req.session) {
+    console.log("this is the post login request    "+req.body.name)
     req.session.name = req.body.name;
   }
   res.redirect("/account");
@@ -38,7 +40,7 @@ router.post("/add", (req,res) => {
 
 router.get("/dashboard", (req,res) => {
   console.log(req.session.favMovies);
-  console.log(data)
+
   var data = {};
   if (req.session && req.session.favMovies) {
     data.favMovies = req.session.favMovies;

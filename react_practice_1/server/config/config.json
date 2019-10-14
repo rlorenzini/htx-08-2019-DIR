@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "srnvzcxm",
+    "password": "ijcUQqejTZCHSQAT_4dHf11dLUkvAgY3",
+    "database": "srnvzcxm",
+    "host": "otto.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "srnvzcxm",
+    "password": "ijcUQqejTZCHSQAT_4dHf11dLUkvAgY3",
+    "database": "srnvzcxm",
+    "host": "otto.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "srnvzcxm",
+    "password": "ijcUQqejTZCHSQAT_4dHf11dLUkvAgY3",
+    "database": "srnvzcxm",
+    "host": "otto.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
