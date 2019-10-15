@@ -1,11 +1,9 @@
 import React from 'react';
 //=====================ROUTER IMPORTS
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 //=====================COMPONENTS IMPORTS
 import App from './App';
-import Index from './components/navlinkPages/Index';
 //=====================OTHER IMPORTS
 import * as serviceWorker from './serviceWorker';
 

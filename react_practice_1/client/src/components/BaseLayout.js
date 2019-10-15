@@ -1,26 +1,28 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import {useRoutes, A} from 'hookrouter';
+import { useRoutes } from 'hookrouter';
 //==================COMPONENT IMPORTS
 import Header from './Header';
+import Footer from './Footer';
 import Index from './navlinkPages/Index';
 import TestPage from './navlinkPages/TestPage';
+import Login from './navlinkPages/Login';
 //==================STYLING IMPORTS
 import { BaseLayoutStyles } from './styling/BaseLayoutStyles';
 
 const routes = {
   '/': () => <Index />,
-  '/testPage': () => <TestPage />
+  '/testPage': () => <TestPage />,
+  '/login': () => <Login />
 }
 
 const BaseLayout = (props) => {
   const routeResult = useRoutes(routes);
 
   return (
-    <BaseLayoutStyles>
+    <BaseLayoutStyles className='wrapper'>
         <Header />
         { routeResult }
-      <h1>This Is The Base Layout</h1>
+        <Footer className='footer'/>
     </BaseLayoutStyles>
   );
 };

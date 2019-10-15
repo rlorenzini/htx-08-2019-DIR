@@ -1,5 +1,5 @@
 import React from 'react';
-import {useRoutes, A} from 'hookrouter';
+import { A } from 'hookrouter';
 import { HeaderStyling } from './styling/HeaderStyling';
 
 
@@ -9,6 +9,9 @@ const Header = () => {
     <HeaderStyling>
       <A href='/' className='anchorLinkText'>
         Home
+      </A>
+      <A href='/login' className='anchorLinkText'>
+        Login
       </A>
       <A href='/testPage' className='anchorLinkText'>
         Test Page
