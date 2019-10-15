@@ -23,14 +23,14 @@ a:link {
 
 a:hover {
   text-decoration: underline;
-  color: lightgray;
+  color: white;
 }
 
 a:visited {
-  color: lightgray;
+  color: white;
 }
 
 a:active {
-  color: seagreen;
+  color: blue;
 }
 `

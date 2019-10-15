@@ -15,7 +15,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.post('/Signup', (req,res) => {
+  console.log('YOU DID IT')
+  console.log(req.body)
 
+  //move req.body to DB
+});
 
 
 app.listen(PORT, () => {

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const HeaderStyling = styled.div`
-background-color: blue;
-color: red;
+background-color: black;
+color: white;
+border: 2px solid blue;
 
 .plainTextStyling {
   color: navy;
@@ -15,24 +16,25 @@ color: red;
 }
 /* =================ANCHOR LINK STYLING */
 /* a link hover visited active */
-a {
+A {
     padding: 5px;
 }
 
-a:link {
+A:link {
   text-decoration: none;
 }
 
-a:hover {
+A:hover {
   text-decoration: underline;
-  color: lightgray;
+  color: white;
 }
 
-a:visited {
-  color: lightgray;
+A:visited {
+  color: white;
 }
 
-a:active {
-  color: seagreen;
+A:active {
+  color: blue;
+  font-weight: 900;
 }
 `
