@@ -15,11 +15,34 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/Signup', (req,res) => {
-  console.log('YOU DID IT')
-  console.log(req.body)
+//====================HANDLING SIGNUP==================
 
-  //move req.body to DB
+app.post('/signup', (req,res) => {
+
+  let username = req.body.username,
+    password = req.body.password,
+    email = req.body.email
+
+  models.User.findOne({
+    where: {
+      username: username
+    }
+  }).then((user) => {
+    if (user) {
+      res.status(500).json({ message: "Username already exists!", status: 500 })
+    } else {
+      bcrypt.hash(password, SALT_ROUNDS, (error, hash) => {
+        if (error == null) {
+          let user = models.User.build({
+            username: username,
+            password: hash,
+            email: email
+          })
+          user.save()
+        } //end of if
+      }) //end of bcrypt
+    } //end of else
+  }) //end of promise
 });
 
 

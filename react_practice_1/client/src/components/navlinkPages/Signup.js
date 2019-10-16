@@ -6,7 +6,7 @@ const Signup = () => {
 
   const handleSubmitSignup = () => {
     if (inputs.password1 === inputs.password2) {
-    fetch('http://localhost:8080/Signup', {
+    fetch('http://localhost:8080/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -16,8 +16,17 @@ const Signup = () => {
         password: inputs.password1,
         email: inputs.email
       })
-    })
-    }//end of if p1 === p2
+    }).then(response =>
+      response.json()).then(json => {
+        if (json.status === 200) {
+          alert("status is 200! yay!")
+        } else if (json.status === 500) {
+          alert(json.message)
+        }
+      }).catch((error) => {
+        console.log(error)
+      }) //end of promise and catch
+    }//end of if password1 === password2
     else {
       alert(`Your passwords did not match. Try again.`)
     }
