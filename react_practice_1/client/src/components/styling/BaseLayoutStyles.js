@@ -26,6 +26,7 @@ overflow: auto;
   color: #fff;
   background-color: #000;
   border: 2px solid blue;
+  padding-right: 10px;
 }
 
 `
