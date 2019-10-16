@@ -15,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//====================HANDLING SIGNUP==================
+//====================HANDLING SIGNUP==========================================
 // create login and bcrypt compare passwords
 // bcrypt.compare to compare passwords
 app.post('/signup', (req,res) => {
@@ -45,7 +45,7 @@ app.post('/signup', (req,res) => {
     } //end of else
   }) //end of promise
 });
-//====================HANDLING LOGIN===================
+//====================HANDLING LOGIN===========================================
 app.post('/login', (req,res) => {
   let username = req.body.username,
     password = req.body.password
