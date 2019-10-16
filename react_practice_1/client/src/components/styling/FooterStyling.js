@@ -4,7 +4,11 @@ import styled from 'styled-components';
 
 export const FooterStyling = styled.div`
 
-border: 2px solid blue;
+/* border: 2px solid blue; */
+height: 2.3rem;
+display: flex;
+justify-content: flex-end;
+align-items: center;
 
 
 .anchorLinkText {
@@ -15,6 +19,7 @@ border: 2px solid blue;
 /* a link hover visited active */
 a {
     padding: 5px;
+    font-size: 1.05rem;
 }
 
 a:link {

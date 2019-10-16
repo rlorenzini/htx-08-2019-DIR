@@ -6,13 +6,15 @@ import Footer from './Footer';
 import Index from './navlinkPages/Index';
 import TestPage from './navlinkPages/TestPage';
 import Signup from './navlinkPages/Signup';
+import Login from './navlinkPages/Login';
 //==================STYLING IMPORTS
 import { BaseLayoutStyles } from './styling/BaseLayoutStyles';
 
 const routes = {
   '/': () => <Index />,
   '/testPage': () => <TestPage />,
-  '/Signup': () => <Signup />
+  '/signup': () => <Signup />,
+  '/login': () => <Login />
 }
 
 const BaseLayout = (props) => {

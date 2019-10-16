@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //====================HANDLING SIGNUP==================
 // create login and bcrypt compare passwords
-// bcrypt.compare to compare passwords 
+// bcrypt.compare to compare passwords
 app.post('/signup', (req,res) => {
 
   let username = req.body.username,
@@ -45,7 +45,29 @@ app.post('/signup', (req,res) => {
     } //end of else
   }) //end of promise
 });
-
+//====================HANDLING LOGIN===================
+app.post('/login', (req,res) => {
+  let username = req.body.username,
+    password = req.body.password
+  models.User.findOne({
+    where: {
+      username: username
+    }
+  }).then((user) => {
+    if (user) {
+      bcrypt.compare(password, user.password, (error, result) => {
+        if (result) {
+          // add json web token here
+          console.log("login successful")
+          res.status(200).json({ message: "success", status: 200 })
+        } // else if json web token fails status 500
+      }) // end of bcrypt compare
+    } else if (user === null) {
+      let message = "error: login failed"
+      res.status(500).json({ message: message, status: 500 })
+    }
+  }) // end of promise
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on localhost: ${PORT}.`);

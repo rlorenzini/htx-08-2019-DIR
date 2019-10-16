@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 //=====================COMPONENTS IMPORTS
 import App from './App';
+import './App.css';
 //=====================OTHER IMPORTS
 import * as serviceWorker from './serviceWorker';
 

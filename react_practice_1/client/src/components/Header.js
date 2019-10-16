@@ -11,8 +11,11 @@ const Header = (props) => {
       <A href='/' className='anchorLinkText'>
         Home
       </A>
-      <A href='/Signup' className='anchorLinkText'>
+      <A href='/signup' className='anchorLinkText'>
         Signup
+      </A>
+      <A href='/login' className='anchorLinkText'>
+        Login
       </A>
       <A href='/testPage' className='anchorLinkText'>
         Test Page

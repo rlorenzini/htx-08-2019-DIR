@@ -13,6 +13,7 @@ border: 2px solid blue;
 .anchorLinkText {
   color: white;
   font-weight: 700;
+  font-size: 1.05rem;
 }
 /* =================ANCHOR LINK STYLING */
 /* a link hover visited active */

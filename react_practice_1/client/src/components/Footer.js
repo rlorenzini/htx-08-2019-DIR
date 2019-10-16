@@ -8,10 +8,10 @@ const Footer = () => {
   return (
     <FooterStyling className='footer push'>
       <A href='/aboutus' className='anchorLinkText'>
-        Home
+        About Us
       </A>
       <A href='/contactus' className='anchorLinkText'>
-        Login
+        Contact Us
       </A>
     </FooterStyling>
   );
