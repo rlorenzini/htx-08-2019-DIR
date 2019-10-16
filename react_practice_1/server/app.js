@@ -16,7 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //====================HANDLING SIGNUP==================
-
+// create login and bcrypt compare passwords
+// bcrypt.compare to compare passwords 
 app.post('/signup', (req,res) => {
 
   let username = req.body.username,
