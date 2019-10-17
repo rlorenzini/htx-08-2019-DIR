@@ -10,7 +10,5 @@ CLIENT SIDE
     --create authenticated utility
 
 SERVER SIDE
-  --login
-    --create login bcrypt compare for password1 and 2
-  --json web token
+  --login json web token
     --set pass/fail for login
