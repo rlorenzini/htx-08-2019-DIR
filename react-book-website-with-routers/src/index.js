@@ -4,13 +4,12 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 //IMPORT ROUTER
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-//IMPORTING COMPONENTS
-import App from './App';
-import Content from './components/Content';
+//IMPORTING BASE COMPONENTS
 import BaseLayout from './components/BaseLayout';
 //IMPRTING NAVLINK COMPONENTS
 import Home from './components/NavLinks/Home';
 import BookStore from './components/NavLinks/BookStore';
+import BookPage from './components/NavLinks/BookPage';
 import PageNotFound from './components/NavLinks/PageNotFound';
 
 //BaseLayout has been designated, BY ME, to hold to history/children information
@@ -29,14 +28,15 @@ import PageNotFound from './components/NavLinks/PageNotFound';
 //important to keep in mind. Now, my BaseLayout has a prop called CHILDREN.
 
 //The last Route has no path and is a catch for any and all attempts to go to
-//undefined URLs. 
+//undefined URLs.
 
 ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
         <Route path='/' exact component={Home} />
-        <Route path='/bookStore' component={BookStore} />
+        <Route path='/bookStore' exact component={BookStore} />
+        <Route path='/bookStore/:id' exact component={BookPage} />
         <Route component={PageNotFound} />
       </Switch>
     </BaseLayout>
