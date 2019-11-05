@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+//IMPORT ROUTER
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //IMPORTING COMPONENTS
 import App from './App';
@@ -10,7 +11,17 @@ import BaseLayout from './components/BaseLayout';
 import Home from './components/NavLinks/Home';
 import BookStore from './components/NavLinks/BookStore';
 
+//BaseLayout has been designated, BY ME, to hold to history/children information
+//from the Router. The DOM structure IS VERY IMPORTANT. BrowserRouter must contain
+//the component which will be holding the this.props.information (history and children)
+//and that component MUST HOLD the Switch. The Switch allows this.props.children
+//to dynamically change based on which PATH (action/ROUTE) you use and which
+//COMPONENT is associated with that PATH.
 
+
+//NOTE: ONE ROUTE MUST HAVE THE KEY WORD EXACT!!!!!! THIS IS NOT OPTION!!!!!!
+//This is the component which will load by default. Without this, the Route will
+//fail and crash your app.
 
 ReactDOM.render(
   <BrowserRouter>
