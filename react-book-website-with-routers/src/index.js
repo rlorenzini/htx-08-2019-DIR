@@ -8,8 +8,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import Content from './components/Content';
 import BaseLayout from './components/BaseLayout';
+//IMPRTING NAVLINK COMPONENTS
 import Home from './components/NavLinks/Home';
 import BookStore from './components/NavLinks/BookStore';
+import PageNotFound from './components/NavLinks/PageNotFound';
 
 //BaseLayout has been designated, BY ME, to hold to history/children information
 //from the Router. The DOM structure IS VERY IMPORTANT. BrowserRouter must contain
@@ -26,12 +28,16 @@ import BookStore from './components/NavLinks/BookStore';
 //NOTE: The Route passes the components as THIS.PROPS.CHILDREN. This is VERY
 //important to keep in mind. Now, my BaseLayout has a prop called CHILDREN.
 
+//The last Route has no path and is a catch for any and all attempts to go to
+//undefined URLs. 
+
 ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/bookStore' component={BookStore} />
+        <Route component={PageNotFound} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
