@@ -9,6 +9,8 @@ import Footer from './Footer';
 //WE ARE USING STATE, SO WE MUST USE A COMPONENT!!!!!!!!
 //History, children, this, props... it cannot be used/accessed/passed
 //in a stateless component (aka function)
+//As stated in index.js, CHILDREN is a prop which is the current COMPONENT being
+//used by the Route.
 
 class BaseLayout extends Component {
   render(){

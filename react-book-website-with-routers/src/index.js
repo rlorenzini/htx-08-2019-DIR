@@ -21,7 +21,10 @@ import BookStore from './components/NavLinks/BookStore';
 
 //NOTE: ONE ROUTE MUST HAVE THE KEY WORD EXACT!!!!!! THIS IS NOT OPTION!!!!!!
 //This is the component which will load by default. Without this, the Route will
-//fail and crash your app.
+//fail and crash your app. I pute the key world EXACT on my Home/Index page.
+
+//NOTE: The Route passes the components as THIS.PROPS.CHILDREN. This is VERY
+//important to keep in mind. Now, my BaseLayout has a prop called CHILDREN.
 
 ReactDOM.render(
   <BrowserRouter>

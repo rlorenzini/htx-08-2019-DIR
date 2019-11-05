@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 
-//Content is displaying the Component passed from the Router via index.js 
+//Content is displaying the Component passed from the Router via index.js
+//I passed this.props.children via BaseLayout to Component as content, so now
+//we can call this.props.content to display our active component
+
+//WHY DO I SPLIT UP MY COMPONENTS THIS MUCH?
+//this gives me more control over debugging, testing, styling, and changing content 
 
 class Content extends Component {
   render(){
@@ -12,4 +16,4 @@ class Content extends Component {
   )};
 }
 
-export default withRouter(Content);
+export default Content;
