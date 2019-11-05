@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //IMPORTING BASE COMPONENTS
 import BaseLayout from './components/BaseLayout';
-//IMPRTING NAVLINK COMPONENTS
+//IMPORTING NAVLINK COMPONENTS
 import Home from './components/NavLinks/Home';
 import BookStore from './components/NavLinks/BookStore';
 import BookPage from './components/NavLinks/BookPage';
