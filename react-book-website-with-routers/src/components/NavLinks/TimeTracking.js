@@ -7,9 +7,8 @@ class TimeTracking extends Component {
   render(){
     return(
       <div>
-      This is my clock
       <Clock />
-      This is my timer
+      <div />
       <Timer />
       </div>
     )
