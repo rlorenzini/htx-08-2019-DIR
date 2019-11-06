@@ -13,6 +13,7 @@ class Header extends Component {
       <div>
       <NavLink to='/'>Home</NavLink>
       <NavLink to='/bookStore'>BookStore</NavLink>
+      <NavLink to='/timeTracking'>TimeTracking</NavLink>
       </div>
   )};
 }

@@ -10,6 +10,7 @@ import BaseLayout from './components/BaseLayout';
 import Home from './components/NavLinks/Home';
 import BookStore from './components/NavLinks/BookStore';
 import BookPage from './components/NavLinks/BookPage';
+import TimeTracking from './components/NavLinks/TimeTracking';
 import PageNotFound from './components/NavLinks/PageNotFound';
 
 //BaseLayout has been designated, BY ME, to hold to history/children information
@@ -37,6 +38,7 @@ ReactDOM.render(
         <Route path='/' exact component={Home} />
         <Route path='/bookStore' exact component={BookStore} />
         <Route path='/bookStore/:id' exact component={BookPage} />
+        <Route path='/timeTracking' exact component={TimeTracking} />
         <Route component={PageNotFound} />
       </Switch>
     </BaseLayout>
