@@ -9,9 +9,11 @@ class Timer extends Component {
       message: 'Ready, Set, Count!'
     }
   };
-
+  //state seconds and minutes are used for display purposes and not logic
   secondsRemaining;
+  //total global remaining seconds
   intervalHandle;
+  //global interval countdown
 
   handleChange = (e) => {
     this.setState({
@@ -19,9 +21,12 @@ class Timer extends Component {
     })
   };
 
-  handleTimerInput = (e) => {
+  handleTimerLogic = (e) => {
     var min = Math.floor(this.secondsRemaining / 60);
+    //min is the global remaining seconds / 60
     var sec = this.secondsRemaining - (min * 60);
+    //sec is the global remaining seconds - min * 60
+    //this is to make the display showing 00 when the value is 60 seconds
     this.setState({
       minutes: min,
       seconds: sec
@@ -38,21 +43,26 @@ class Timer extends Component {
       })
     }
     if (min === 0 & sec === 0) {
+      //once time === 0, clear the global interval 
       clearInterval(this.intervalHandle)
       this.setState({
         message: "Timer is done!"
       })
     }
     this.secondsRemaining--
+    //global remaining seconds decrement
   };
 
-  handleTimerCountdown = (e) => {
+  handleStartCountdown = (e) => {
     this.setState({
       message: "COUNTDOWN!"
     })
-    this.intervalHandle = setInterval(this.handleTimerInput, 1000);
+    //on click, set global interval countdown
+    this.intervalHandle = setInterval(this.handleTimerLogic, 1000);
     let time = this.state.minutes;
+    //this.state.minutes = input value of user
     this.secondsRemaining = time * 60;
+    //global remaining seconds is set to the minutes * 60
     e.preventDefault();
   };
 
@@ -66,7 +76,7 @@ class Timer extends Component {
           <label htmlFor="seconds">Enter Time</label>
           <input required onChange={this.handleChange} type="number" name="minutes" placeholder="Minutes"></input>
           <div />
-          <button onClick={this.handleTimerCountdown} type="submit" name="timerSubmit">Start Timer</button>
+          <button onClick={this.handleStartCountdown} type="submit" name="timerSubmit">Start Timer</button>
         </form>
       </div>
     )
