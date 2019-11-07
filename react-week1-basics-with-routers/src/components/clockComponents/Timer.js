@@ -23,15 +23,17 @@ class Timer extends Component {
 
   handleTimerLogic = (e) => {
     var min = Math.floor(this.secondsRemaining / 60);
-    //min is the global remaining seconds / 60
+    //min is the global remaining seconds / 60 (360 secnods / 60 = 6 minutes)
     var sec = this.secondsRemaining - (min * 60);
     //sec is the global remaining seconds - min * 60
+    //360 seconds - (6 minutes * 60) = 0
+    //361 seconds - (6 minutes * 60) = 1
     //this is to make the display showing 00 when the value is 60 seconds
     this.setState({
       minutes: min,
       seconds: sec
     })
-
+    
     if (sec < 10) {
       this.setState({
         seconds: "0" + this.state.seconds
@@ -43,7 +45,7 @@ class Timer extends Component {
       })
     }
     if (min === 0 & sec === 0) {
-      //once time === 0, clear the global interval 
+      //once time === 0, clear the global interval
       clearInterval(this.intervalHandle)
       this.setState({
         message: "Timer is done!"
