@@ -25,7 +25,7 @@ export default class Counter extends Component {
 
     return (
       <div>
-      
+
         <button name="potatoes" onClick={this.handleOnClickIncrement}> BUTTON! </button>
         {this.state.count}
 
