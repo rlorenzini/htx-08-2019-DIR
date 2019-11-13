@@ -12,6 +12,7 @@ export default class Header extends Component {
       <div>
         <NavLink to='/'>Counter</NavLink>
         <NavLink to='/clock'>Clock</NavLink>
+        <NavLink to ='/alarm'>Alarm</NavLink>
       </div>
     )
   }

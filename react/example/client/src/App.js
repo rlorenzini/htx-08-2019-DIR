@@ -6,6 +6,7 @@ import BaseLayout from './components/BaseLayout';
 
 import Counter from './components/Counter';
 import Clock from './components/Clock';
+import Alarm from './components/Alarm';
 
 //Switch loads components, BaseLayout displays components as props.children
 
@@ -25,6 +26,7 @@ class App extends Component {
 
           <Route path='/' exact component={Counter} />
           <Route path='/clock' component={Clock} />
+          <Route path='/alarm' component={Alarm} />
 
           </Switch>
         </BaseLayout>
