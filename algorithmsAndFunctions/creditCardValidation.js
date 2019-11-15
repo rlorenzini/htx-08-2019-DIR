@@ -3,13 +3,13 @@ function CardChecker(num) {
   let ccnum = num.toString();
   console.log(ccnum.slice(0,4))
 
-  //start at index 0, length 1, take that value
+  //start at index 0, end at length 1, take that value
   let firstDigit = parseInt(ccnum.slice(0,1));
 
-  //start at index 0, length of 2, take those values out
+  //start at index 0, end at length of 2, take those values out
   let firstTwoDigits = parseInt(ccnum.slice(0,2));
 
-  //start at index 0, length 4, take those values out
+  //start at index 0, end at length 4, take those values out
   let firstFourDigits = parseInt(ccnum.slice(0,4));
 
   //check if length is 16
@@ -57,4 +57,4 @@ console.log(CardChecker(americanExpress));
 
 // ^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
 
-//quicker, easier, and faster than a nested conditional statement 
+//quicker, easier, and faster than a nested conditional statement
