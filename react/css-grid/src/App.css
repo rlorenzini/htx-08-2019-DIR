@@ -1,0 +1,41 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(30, 1rem);
+  grid-template-rows: repeat(26, 1rem);
+}
+
+.white {
+  background-color: white;
+}
+
+.lightgray {
+  background-color: lightgray;
+}
+
+.gray {
+  background-color: darkgray;
+}
+
+.darkgray {
+  background-color: gray;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.darkred {
+  background-color: darkred;
+}
+
+.blue {
+  background-color: darkblue;
+}
+
+.darkblue {
+  background-color: navy;
+}
