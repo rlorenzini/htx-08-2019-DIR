@@ -1,0 +1,70 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.button-basic, .button-submit, .button-report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}
+
+.testingSass {
+  height: 200px;
+  width: 200px;
+  border: 5px solid blue;
+}
+
+.global {
+  color: green;
+}
+
+.nested {
+  color: blue;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid red;
+  background-color: black;
+}
+
+.borderMixin {
+  border: 1px solid orange;
+  height: 50px;
+  width: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */

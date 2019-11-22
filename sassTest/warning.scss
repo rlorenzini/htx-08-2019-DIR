@@ -1,0 +1,11 @@
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid red;
+  background-color: black;
+}
+
+@mixin bordered($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
