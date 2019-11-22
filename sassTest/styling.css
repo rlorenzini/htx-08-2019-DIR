@@ -1,0 +1,20 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.hello {
+  color: blue;
+}
+
+.button-standard {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+/*# sourceMappingURL=styling.css.map */
