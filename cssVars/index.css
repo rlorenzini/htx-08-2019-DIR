@@ -34,3 +34,34 @@ body {
   width: calc(var(--testWidth, 400px) / 2);
   background-color: gray;
 }
+
+.testFour {
+  height: 200px;
+  width: 200px;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.testFour .text {
+  color: white;
+}
+
+.testFive {
+  display: none;
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+}
+
+.testFour:hover {
+  border: 2px solid red;
+  background-color: black;
+}
+
+.testFour:hover .text {
+  display: none;
+}
+
+.testFour:hover .testFive {
+  display: block;
+}
