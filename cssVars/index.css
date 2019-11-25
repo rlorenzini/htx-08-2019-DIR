@@ -1,0 +1,36 @@
+/* use :root to declare variables to be used in your css file */
+:root {
+  --primaryColor: darkblue;
+  --secondaryColor: green;
+  --accentColor: black;
+  --testHeight: 300px;
+  --testWidth: 400px;
+}
+
+body {
+  background-color: var(--primaryColor)
+}
+
+/* can insert variables with the var function */
+.testOne {
+  border: 3px solid var(--accentColor, lightgray);
+  background-color: var(--secondaryColor, lightgreen);
+  height: 40px;
+  width: 40px;
+}
+
+/* if the variable does not exist, insert secondary value */
+/* can nest endlessly but should always have a literal value at the end */
+.testTwo {
+  background-color: var(--noColor, white);
+  width: var(--noWidth, var(--alsoNoWidth, 50px));
+  height: var(--noHeight, 50px);
+}
+
+/* can use basic built in functions, such as calc */
+/* height should be 150, width should be 200 */
+.testThree {
+  height: calc(var(--testHeight, 300px) / 2);
+  width: calc(var(--testWidth, 400px) / 2);
+  background-color: gray;
+}
