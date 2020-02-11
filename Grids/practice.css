@@ -30,13 +30,12 @@ body, .container {
 }
 .item {
   text-align: center;
-  line-height: 20px;
+  line-height: 23px;
   border-radius: 10%;
 
   display: grid;
-  grid-gap: 6px;
   grid-template-columns: repeat(1, 46px);
-  grid-template-rows: repeat(2, 20px);
+  grid-template-rows: repeat(2, 23px);
 }
 .nonmetal {
   background-color: rgb(33,71,98);
