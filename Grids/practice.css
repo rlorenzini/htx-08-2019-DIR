@@ -1,0 +1,80 @@
+/* 18 x 9  */
+/* colors contributed to https://pulsardev.github.io/mendelable/#/ */
+
+html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+p {
+  margin: 0;
+  color: white;
+}
+body, .container {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  background-color: rgb(25,34,40);
+}
+.grid {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 30rem;
+  height: 30rem;
+  display: grid;
+
+  grid-gap: 5px;
+  grid-template-columns: repeat(18, 50px);
+  grid-template-rows: repeat(9, 50px);
+}
+.item {
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10%;
+
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(1, 46px);
+  grid-template-rows: repeat(2, 20px);
+}
+.nonmetal {
+  background-color: rgb(33,71,98);
+  border: 2px solid rgb(1,169,244);
+}
+.halogen {
+  background-color: rgb(84,54,74);
+  border: 2px solid rgb(240,98,146);
+}
+.alkali {
+  background-color: rgb(86,48,51);
+  border: 2px solid rgb(244,67,53);
+}
+.alkalineEarth {
+  background-color: rgb(87,67,47);
+  border: 2px solid rgb(255,152,0);
+}
+.metalloid {
+  background-color: rgb(49,44,82);
+  border: 2px solid rgb(102,58,183);
+}
+.metal {
+  background-color: rgb(36,80,78);
+  border: 2px solid rgb(24,202,167);
+}
+.transitionMetal {
+  background-color: rgb(83,76,53);
+  border: 2px solid rgb(239,187,50);
+}
+.nobleGas {
+  background-color: rgb(33,76,89);
+  border: 2px solid rgb(0,188,212);
+}
+.lanthanoid {
+  background-color: rgb(57,77,57);
+  border: 2px solid rgb(139,195,74);
+}
+.actinoid {
+  background-color: rgb(73,84,54);
+  border: 2px solid rgb(205,220,56);
+}
